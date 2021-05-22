@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.programmercommunity.hicks.blog.asset.Paths;
 import com.programmercommunity.hicks.blog.model.Blog;
@@ -32,12 +33,12 @@ public class BlogController {
 	}
 
 	@PostMapping(Paths.BlogControllerPaths.ADD)
-	public Response add(Blog blog) {
+	public Response add(@RequestBody Blog blog) {
 		return this.add(blog);
 	}
 
 	@PutMapping(Paths.BlogControllerPaths.UPDATE)
-	public Response update(Blog blog) {
+	public Response update(@RequestBody Blog blog) {
 		return this.update(blog);
 	}
 
