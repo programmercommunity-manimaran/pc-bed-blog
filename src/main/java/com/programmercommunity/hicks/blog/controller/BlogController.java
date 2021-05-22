@@ -34,12 +34,12 @@ public class BlogController {
 
 	@PostMapping(Paths.BlogControllerPaths.ADD)
 	public Response add(@RequestBody Blog blog) {
-		return this.add(blog);
+		return this.BlogService.add(blog);
 	}
 
 	@PutMapping(Paths.BlogControllerPaths.UPDATE)
 	public Response update(@RequestBody Blog blog) {
-		return this.update(blog);
+		return this.BlogService.update(blog);
 	}
 
 	@DeleteMapping(Paths.BlogControllerPaths.DELETE)
